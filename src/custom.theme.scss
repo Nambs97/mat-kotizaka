@@ -1,0 +1,93 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+//Defining brands custom colors for theme
+$mat-custdarkblue: (
+    50 : #e6e8ea,
+    100 : #c0c5cb,
+    200 : #969fa8,
+    300 : #6b7885,
+    400 : #4c5b6a,
+    500 : #2c3e50,
+    600 : #273849,
+    700 : #213040,
+    800 : #1b2837,
+    900 : #101b27,
+    A100 : #68abff,
+    A200 : #358fff,
+    A400 : #0272ff,
+    A700 : #0067e7,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$mat-custlightblue: (
+    50 : #e0ebf2,
+    100 : #b3cdde,
+    200 : #80abc9,
+    300 : #4d89b3,
+    400 : #2670a2,
+    500 : #005792,
+    600 : #004f8a,
+    700 : #00467f,
+    800 : #003c75,
+    900 : #002c63,
+    A100 : #93b9ff,
+    A200 : #6098ff,
+    A400 : #2d76ff,
+    A700 : #1466ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+
+//Defining Dark Theme Colors
+$custom-dark-primary: mat-palette($mat-custdarkblue);
+$custom-dark-accent: mat-palette($mat-light-blue);
+$custom-dark-theme: mat-dark-theme($custom-dark-primary, $custom-dark-accent);
+
+//Defining Light Theme Colors
+$custom-light-primary: mat-palette($mat-custlightblue);
+$custom-light-accent: mat-palette($mat-custdarkblue);
+$custom-light-theme: mat-light-theme($custom-light-primary, $custom-light-accent);
+
+
+// additional css classes
+// you can hardcode one of them on the <body> tag 
+// or switch dynamically during runtime with [class]
+.mat-light-theme {
+    @include angular-material-theme($custom-light-theme);
+  }
+  
+.mat-dark-theme {
+@include angular-material-theme($custom-dark-theme);
+}

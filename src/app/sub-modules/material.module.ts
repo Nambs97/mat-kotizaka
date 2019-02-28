@@ -8,7 +8,14 @@ import {
   MatRippleModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatIconModule,
+  MatGridListModule,
+  MatMenuModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatListModule,
+  MatCardModule
 } from '@angular/material';
 
 /**
@@ -23,7 +30,14 @@ import {
     MatRippleModule,
     ObserversModule,
     PlatformModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule
   ]
 })
 export class CustomMaterialModule {}

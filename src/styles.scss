@@ -1,2 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import './custom.theme';
+
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+//Correct vertical alignment of mat-icon in mat-button
+button.mat-button .mat-icon,
+a.mat-button .mat-icon,
+a.mat-raised-button .mat-icon,
+a.mat-flat-button .mat-icon,
+a.mat-stroked-button .mat-icon {
+    margin-bottom: 5px;
+}
+
+.mat-icon-button .mat-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: 4px;
+  }
