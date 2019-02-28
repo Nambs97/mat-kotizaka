@@ -39,6 +39,11 @@ button .mat-icon {
   height: auto; 
 }
 
+mat-sidenav-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .fixed-toolbar {
   overflow: hidden;
   background-color: #2c3e50;
