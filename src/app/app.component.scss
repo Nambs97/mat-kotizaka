@@ -1,0 +1,12 @@
+.container {
+    //display: flex;
+    min-height: 100vh;
+    //flex-direction: column;
+}
+
+
+app-footer {
+    overflow: hidden;
+    z-index: 999;
+    margin-bottom: -1px;
+}

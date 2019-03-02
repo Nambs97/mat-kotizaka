@@ -1,4 +1,4 @@
-<mat-toolbar class="fixed-toolbar">
+<mat-toolbar color="primary" class="fixed-toolbar">
   <mat-toolbar-row fxLayout="row wrap">
       <span fxFlex><a mat-button class="nav-brand"><mat-icon>lock</mat-icon>Kotizaka</a></span>
       <ul fxFlex fxFlexAlign="center" fxLayout fxLayoutGap="0px" fxHide.lt-md class="navigation-items">
@@ -31,14 +31,19 @@
       [opened]="false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+        <mat-divider></mat-divider>
       <a mat-list-item *ngFor="let menuItem of menuItems" [routerLink]="menuItem.link">
         <mat-icon>{{ menuItem.icon }}</mat-icon>
         {{ menuItem.text}}
       </a>
+      <mat-divider></mat-divider>
+      <mat-slide-toggle style="margin-top: 15px; margin-left: 20px;" fxHide.gt-xs><small>Light Theme</small></mat-slide-toggle>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <!-- Add Content Here -->
-    <router-outlet></router-outlet>
+    <div class="sidenav-content">
+        <ng-content></ng-content>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

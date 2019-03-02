@@ -1,5 +1,9 @@
 .sidenav-container {
-  height: 100%;
+  min-height: calc(100vh - 63px);
+  @media (max-width: 720px)
+  {
+    min-height: calc(100vh - 55px);
+  }
 }
 
 .sidenav {
@@ -10,11 +14,6 @@
   background: inherit;
 }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
 
 .navigation-items{
   list-style-type: none;
@@ -27,10 +26,6 @@
   font-size: 20px;
 }
 
-.cust-toolbar {
-  z-index: 100;
-}
-
 mat-icon {
   margin-right: 3px;
 }
@@ -41,15 +36,13 @@ button .mat-icon {
 
 mat-sidenav-content {
   padding-top: 50px;
-  padding-bottom: 50px;
-  height: 100%;
 }
 
 .fixed-toolbar {
   overflow: hidden;
-  background-color: #2c3e50;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   z-index: 999;
 }
+
