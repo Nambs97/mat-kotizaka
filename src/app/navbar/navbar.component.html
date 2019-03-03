@@ -37,7 +37,13 @@
         {{ menuItem.text}}
       </a>
       <mat-divider></mat-divider>
-      <mat-slide-toggle style="margin-top: 15px; margin-left: 20px;" fxHide.gt-xs><small>Light Theme</small></mat-slide-toggle>
+      <div fxLayout="row" fxLayoutAlign="start center" mat-list-item fxHide.gt-xs>
+        <mat-icon class="toggle-icon">palette</mat-icon>
+        <span>Light Theme</span>
+        <span fxFlex></span>
+        <mat-slide-toggle fxFlexAlign="end" style="margin: 20px;"></mat-slide-toggle>
+      </div>
+      <mat-divider fxHide.gt-xs></mat-divider>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
