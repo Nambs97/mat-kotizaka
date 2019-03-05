@@ -1,6 +1,7 @@
-<div fxLayout="column" class="container mat-dark-theme">
+<!-- <div fxLayout="column" class="container mat-dark-theme"></div> -->
+<div fxLayout="column" [ngClass]="{'container': true, 'mat-dark-theme': isDark, 'mat-light-theme': !isDark}" class="container mat-dark-theme">
     <div fxFlex="1">
-        <app-navbar>
+        <app-navbar (themeChange)="setTheme($event)">
             <router-outlet></router-outlet>
         </app-navbar>
     </div>

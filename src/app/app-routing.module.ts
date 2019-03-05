@@ -5,7 +5,7 @@ import { MatDashboardComponent } from './mat-dashboard/mat-dashboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: "login", component: SigninComponent },
+  { path: "signin", component: SigninComponent },
   { path: "dashboard", component: MatDashboardComponent },
   { path: "account", component: DashboardComponent },
   { path: "payments", component: DashboardComponent },

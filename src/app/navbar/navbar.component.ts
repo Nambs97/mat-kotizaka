@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 // import { Observable } from 'rxjs';
 // import { map } from 'rxjs/operators';
@@ -15,6 +15,8 @@ export class NavbarComponent {
   //     map(result => result.matches)
   //   );
 
+  @Output() themeChange = new EventEmitter();
+
   menuItems = [
     {id: 1, text: 'Home', icon: 'home', link: 'dashboard'},
     {id: 2, text: 'My accounts', icon: 'person_outline', link: 'account'},
@@ -24,5 +26,15 @@ export class NavbarComponent {
   darkColor = { fill: 'red', stroke: '#797979', background: '#2D3436' }
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  themeChanged(e) {
+    if(e.checked){
+      this.themeChange.emit(false);
+      console.log('Theme change to Light.');
+    } else{
+      this.themeChange.emit(true);
+      console.log('Theme change to Dark.');
+    }
+  }
 
 }

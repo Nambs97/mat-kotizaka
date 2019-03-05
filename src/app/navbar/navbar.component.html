@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" class="fixed-toolbar mat-elevation-z1">
   <mat-toolbar-row fxLayout="row wrap">
-      <span fxFlex><a mat-button class="nav-brand"><mat-icon>lock</mat-icon>Kotizaka</a></span>
+      <span fxFlex><a mat-button class="nav-brand" routerLink="signin"><mat-icon>lock</mat-icon>Kotizaka</a></span>
       <ul fxFlex fxFlexAlign="center" fxLayout fxLayoutGap="0px" fxHide.lt-md class="navigation-items">
           <li class="navigation-item" *ngFor="let menuItem of menuItems">
               <a mat-button [routerLink]="menuItem.link">
@@ -10,7 +10,7 @@
           </li>
       </ul>
       <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-sm>
-        <mat-slide-toggle><small>Light</small></mat-slide-toggle>
+        <mat-slide-toggle (change)="themeChanged($event)"><small>Light</small></mat-slide-toggle>
       </div>
       <button
         type="button"
@@ -41,7 +41,7 @@
         <mat-icon class="toggle-icon">palette</mat-icon>
         <span>Light theme</span>
         <span fxFlex></span>
-        <mat-slide-toggle fxFlexAlign="end" style="margin: 20px;"></mat-slide-toggle>
+        <mat-slide-toggle (change)="themeChanged($event)" fxFlexAlign="end" style="margin: 20px;"></mat-slide-toggle>
       </div>
       <mat-divider fxHide.gt-xs></mat-divider>
     </mat-nav-list>
