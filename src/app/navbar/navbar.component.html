@@ -10,7 +10,7 @@
           </li>
       </ul>
       <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.lt-sm>
-        <mat-slide-toggle (change)="themeChanged($event)"><small>Light</small></mat-slide-toggle>
+        <mat-slide-toggle [checked]="isLightTheme" (change)="onThemeChanged($event)"><small>Light</small></mat-slide-toggle>
       </div>
       <button
         type="button"
@@ -41,7 +41,7 @@
         <mat-icon class="toggle-icon">palette</mat-icon>
         <span>Light theme</span>
         <span fxFlex></span>
-        <mat-slide-toggle (change)="themeChanged($event)" fxFlexAlign="end" style="margin: 20px;"></mat-slide-toggle>
+        <mat-slide-toggle [checked]="isLightTheme" (change)="onThemeChanged($event)" fxFlexAlign="end" style="margin: 20px;"></mat-slide-toggle>
       </div>
       <mat-divider fxHide.gt-xs></mat-divider>
     </mat-nav-list>

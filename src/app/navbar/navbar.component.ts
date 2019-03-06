@@ -1,7 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-// import { Observable } from 'rxjs';
-// import { map } from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,12 +8,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class NavbarComponent {
 
-  // isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-  //   .pipe(
-  //     map(result => result.matches)
-  //   );
-
-  @Output() themeChange = new EventEmitter();
+  isLightTheme: boolean;
 
   menuItems = [
     {id: 1, text: 'Home', icon: 'home', link: 'dashboard'},
@@ -25,16 +18,13 @@ export class NavbarComponent {
 
   darkColor = { fill: 'red', stroke: '#797979', background: '#2D3436' }
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private themeService: ThemeService) {}
 
-  themeChanged(e) {
-    if(e.checked){
-      this.themeChange.emit(false);
-      console.log('Theme change to Light.');
-    } else{
-      this.themeChange.emit(true);
-      console.log('Theme change to Dark.');
-    }
+  //Theme changing using Service
+  onThemeChanged(e) {
+    this.themeService.toggleTheme(e.checked);
+    this.isLightTheme = this.themeService.isLightTheme;
+    console.log('Theme toggled from service : ' + this.themeService.isLightTheme);
   }
 
 }

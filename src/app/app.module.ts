@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatDashboardComponent } from './mat-dashboard/mat-dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { SigninComponent } from './signin/signin.component';
+import { ThemeService } from './services/theme.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { SigninComponent } from './signin/signin.component';
     CustomMaterialModule,
     LayoutModule
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
