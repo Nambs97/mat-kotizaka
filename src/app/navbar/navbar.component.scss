@@ -56,3 +56,47 @@ mat-sidenav-content {
 .app-logo {
   font-family: "Julius Sans One", Muli, sans-serif;
 }
+
+.user-management {
+  font-size: 0.7em;
+  line-height: 15px;
+  margin-left: 15px;
+}
+
+.user-management-sidenav {
+  font-size: 0.9em;
+  line-height: 15px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.user-management p {
+  margin-left: 5px;
+}
+
+.user-management-sidenav p {
+  margin-left: 10px;
+}
+
+.signout-link {
+  text-decoration: none;
+  color: lightcoral;
+}
+
+.signout-link:hover {
+  text-decoration: none;
+  color: rgb(235, 82, 82);
+}
+
+.no-logged-logo {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-picture {
+  border: 2px solid lightgray;
+  border-radius: 50%;
+}

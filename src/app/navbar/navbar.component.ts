@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../services/theme.service';
 
 @Component({
@@ -6,9 +6,10 @@ import { ThemeService } from '../services/theme.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
 
   isLightTheme: boolean;
+  isUserAuth: boolean;
 
   menuItems = [
     {id: 1, text: 'Dashboard', icon: 'dashboard', link: 'dashboard'},
@@ -25,6 +26,11 @@ export class NavbarComponent {
     this.themeService.toggleTheme(e.checked);
     this.isLightTheme = this.themeService.isLightTheme;
     console.log('Theme toggled from service : ' + this.themeService.isLightTheme);
+  }
+
+  ngOnInit() {
+    this.isUserAuth = false;
+    //setTimeout(()=>{this.isUserAuth = true;}, 4000);
   }
 
 }
