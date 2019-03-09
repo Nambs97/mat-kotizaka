@@ -1,6 +1,14 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
+//Custom Font
+$custom-typography: mat-typography-config(
+  $font-family: 'Muli, "Open Sans", sans-serif;',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+@include angular-material-typography($custom-typography);
+
 //Defining brands custom colors for theme
 $mat-custdarkblue: (
     50 : #e6e8ea,
