@@ -12,7 +12,7 @@ export class NavbarComponent {
 
   menuItems = [
     {id: 1, text: 'Dashboard', icon: 'dashboard', link: 'dashboard'},
-    {id: 2, text: 'My accounts', icon: 'account_box', link: 'account'},
+    {id: 2, text: 'My account', icon: 'account_box', link: 'account'},
     {id: 3, text: 'My payments', icon: 'payment', link: 'payments'}
   ] 
 
