@@ -11,8 +11,8 @@ export class NavbarComponent {
   isLightTheme: boolean;
 
   menuItems = [
-    {id: 1, text: 'Home', icon: 'home', link: 'dashboard'},
-    {id: 2, text: 'My accounts', icon: 'person_outline', link: 'account'},
+    {id: 1, text: 'Dashboard', icon: 'dashboard', link: 'dashboard'},
+    {id: 2, text: 'My accounts', icon: 'account_box', link: 'account'},
     {id: 3, text: 'My payments', icon: 'payment', link: 'payments'}
   ] 
 
