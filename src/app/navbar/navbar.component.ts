@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isUserAuth = false;
+    this.isUserAuth = true;
     //setTimeout(()=>{this.isUserAuth = true;}, 4000);
   }
 
